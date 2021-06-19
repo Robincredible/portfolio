@@ -474,6 +474,11 @@ display: flex;
 }
 
 @media screen and (max-width: 600px){
+
+	.header p{
+		font-size: 0.7em;
+	}
+
 	.key-message h1{
 		font-size: 3.5em;
 		line-height: 1;
@@ -514,10 +519,6 @@ display: flex;
 
 @media screen and (max-width: 480px){
 
-	.header p{
-		font-size: 0.8em;
-	}
-
 	.key-message h1,
 	.footer-ender h2{
 		font-size: 2.5em;
@@ -553,6 +554,12 @@ display: flex;
 
 	.emphasize-footer-message p{
 		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 375px){
+	.header p{
+		font-size: 0.5em;
 	}
 }
 
