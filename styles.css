@@ -447,6 +447,11 @@ display: flex;
 }
 
 @media screen and (max-width: 768px){
+
+	.header p{
+		font-size: 1em;
+	}
+
 	.key-message h1{
 		font-size: 3.8em;
 	}
@@ -508,6 +513,11 @@ display: flex;
 }
 
 @media screen and (max-width: 480px){
+
+	.header p{
+		font-size: 0.8em;
+	}
+
 	.key-message h1,
 	.footer-ender h2{
 		font-size: 2.5em;
