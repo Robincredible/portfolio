@@ -417,7 +417,13 @@ display: flex;
 @media screen and (max-width: 992px){
 
 	.header{
-		justify-content: space-between;
+		justify-content: flex-start;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.header > div{
+		flex-basis: 50%;
 	}
 
 	.header .title{
