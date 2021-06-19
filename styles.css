@@ -385,7 +385,7 @@ display: flex;
 	}
 
 	.key-message{
-	  min-height: 992px;
+	  min-height: 150vh;
 	  margin: 0 auto;
 	  font-size: 16px;
 	}
@@ -404,6 +404,10 @@ display: flex;
 		font-size: 6em;
 	}
 
+	.key-message{
+		min-height: 140vh;
+	}
+
 	.portfolio-client-name h2{
 		font-size: 4.8em;
 	}
@@ -418,6 +422,10 @@ display: flex;
 
 	.header .title{
 		display: none;
+	}
+
+	.key-message{
+		min-height: 120vh;
 	}
 
 	.key-message h1{
@@ -435,6 +443,12 @@ display: flex;
 
 	.portfolio-client-name h2{
 		font-size: 4.5em;
+		bottom: 50%;
+ 	    transform: translateY(-50%);
+	}
+
+	.portfolio-image-container{
+		max-height: 500px;
 	}
 
 	.footer br{
@@ -459,6 +473,10 @@ display: flex;
 		font-size: 5em;
 	}
 
+	.key-message{
+		min-height: 100vh;
+	}
+
 	.portfolio-client-name h2{
 		font-size: 4em;
 	}
@@ -480,6 +498,10 @@ display: flex;
 
 	.key-message h1{
 		font-size: 3.8em;
+	}
+
+	.key-message p{
+		font-size: 1em;
 	}
 
 	.portfolio-client-name h2{
@@ -511,7 +533,7 @@ display: flex;
 	}
 
 	.key-message p {
-		font-size: 1em;
+		font-size: 0.8em;
 		margin: 80px 0px 0px 0px;
 	}
 
@@ -548,6 +570,14 @@ display: flex;
 	.key-message h1,
 	.footer-ender h2{
 		font-size: 2.5em;
+	}
+
+	.key-message{
+		min-height: 80vh;
+	}
+
+	.key-message p{
+		font-size: 0.6em;
 	}
 
 	.portfolio-client-name h2{
