@@ -1,0 +1,562 @@
+/*
+ * Portfolio Styles
+ * Author: Robin Joshua Del Mundo
+ */
+
+/* fonts */
+
+@font-face {
+  font-family: Akira;
+  src: local('serif'), url(./fonts/Akira-Expanded-Demo.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MonospaceTypewriter;
+  src: local(sans-serif), url(./fonts/MonospaceTypewriter.ttf);
+  font-display: swap;
+}
+
+/* animations */
+@keyframes rotation {
+	0% { transform: rotate(0deg);}
+	100% { transform: rotate(360deg);}
+}
+
+@keyframes lineBlink {
+
+	50% { color: transparent }
+}
+
+/* vars */
+:root{
+	--height-space:20vh;
+	--white: #efefef;
+	--black: #2c2c2c;
+}
+
+.dark-mode body{
+	background: var(--black);
+	color: var(--white);
+}
+
+.dark-mode a, 
+.dark-mode a:hover, 
+.dark-mode a:visited,
+.dark-mode a:visited:hover{
+	color: var(--white);
+}
+
+.dark-mode .footer .email a:after{
+	background: var(--white);
+}
+
+/* base styles */
+
+html{
+	-webkit-scroll-behavior: smooth;
+	scroll-behavior: smooth;
+}
+
+body{
+	box-sizing: border-box;
+	position: relative;
+	font-family: "MonospaceTypewriter", sans-serif;
+	color: #2c2c2c;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	-webkit-overflow-x: hidden;
+	-webkit-scroll-behavior: smooth;
+	scroll-behavior: smooth;
+	width: 100%;
+}
+
+p{
+	line-height: 1.5;
+}
+
+img {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+a, 
+a:hover, 
+a:visited,
+a:visited:hover{
+	color: #2c2c2c;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	word-break: word-break;
+}
+
+h1,h2,h3,h4{
+	font-family: "Akira";
+}
+
+h1{
+	font-size: 36pt;
+}
+
+h2{
+	font-size: 32pt;
+}
+
+h3{
+	font-size: 18pt;
+}
+
+img{
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
+.container{
+	max-width: 90%;
+	margin:  0 auto;
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+	padding: 40px 10px;
+}
+
+/* header */
+.header{
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	width: 100%;
+	max-width: 90%;
+	z-index: 10;
+}
+
+.header p{
+	font-size: 1.3em;
+	max-width: max-content;
+	margin: 0 auto 0px 0px;
+}
+
+.header > div{
+	flex-basis: 33%;
+}
+
+.header .logo{
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.header .title{
+	justify-content: center;
+	text-align: center;
+}
+
+.header .title p{
+	margin: 0 auto
+}
+
+.header .about{
+	justify-content: flex-end;
+	text-align: right;
+}
+
+.header .about p{
+	margin: 0px 0px 0px auto;
+}
+
+.header .logo p:hover,
+.header .about p:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* key message */
+
+.key-message{
+display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: right;
+  height: 100%;
+  min-height: 20vh;
+  margin: 20% auto 0px auto;
+  font-size: 16px;
+}
+
+.key-message .emphasis{
+	position: relative;
+	width: 100%;
+	align-self: flex-end;
+	margin-left: calc(var(--height-space) * 2) 0 var(--height-space) calc(100% / 12);
+}
+
+.key-message .emphasis span{
+	margin-left: 1em;
+	letter-spacing: 2px;
+	display: inline;
+	max-width: max-content;
+}
+
+.asterisk{
+	max-width: max-content;
+	position: absolute;
+	animation: 3s infinite rotation linear forwards;
+}
+
+.key-message h1{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 8em;
+	line-height: 0.8;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.key-message .declaration{
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.key-message p{
+	font-size: 1.5em;
+	line-height: 2;
+	margin: 10% 50px 0px 0px;
+	width: max-content;
+}
+
+/* portfolio */
+
+.portfolio-items-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.portfolio-item{
+	flex-basis: 100%;
+	display: flex;
+	position: relative;
+	margin: 8% auto;
+}
+
+.portfolio-image-container{
+	max-height: 600px;
+	max-width: 60%;
+	overflow: hidden;
+	opacity: 0.5;
+	filter: grayscale(1) saturate(50%) brightness(0.9);
+}
+
+.portfolio-client-name{
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	bottom: 20%;
+}
+
+
+.portfolio-client-name h2{
+	font-size: 6em;
+	line-height: 0.9;
+	text-align: right;
+	margin: 0;
+}
+
+.load-more{
+	display: none;
+}
+
+.footer{
+	text-align: center;
+	margin: 8% auto 0px;
+}
+
+.footer-message,
+.emphasize-footer-message{
+	margin: 8% auto;
+	font-size: 1.2em;
+}
+
+.emphasize-footer-message p{
+	font-family: Akira;
+	line-height: 1;
+	font-size: 2.8em;
+}
+
+.footer .links{
+	display: flex;
+	justify-content: center;
+	margin: 8% auto;
+}
+
+.footer .links a{
+	margin: 20px 50px;
+	text-decoration: none;
+}
+
+.footer .links a:hover{
+	text-decoration: underline;
+}
+
+
+.footer .email a{
+	text-decoration: none;
+	font-size: 1.3em;
+	position: relative;
+}
+
+.footer .email a:after{
+	content: "";
+	background: #2c2c2c;
+	position: absolute;
+	height: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -15px;
+	width: 100%;
+	transition:  0.3s;
+}
+
+.footer .email a:hover:after{
+	bottom: -8px;
+	transition:  0.3s;
+}
+
+.footer-ender h2{
+	font-size: 8em;
+	margin: 4% auto 0;
+}
+
+@media screen and (max-width: 1550px){
+	.footer-ender h2{
+		font-size: 7em;
+	}
+}
+
+@media screen and (max-width: 1366px){
+	.key-message h1{
+		font-size: 7em;
+	}
+
+	.key-message .emphasis span{
+		margin-left: 0.5em;
+	}
+
+	.key-message{
+  	margin: 0 auto;
+	}
+
+	.key-message p{
+		margin: 80px 100px 0px 0px;
+	}
+
+	.key-message .cool-stuff{
+		text-align: right;
+	}
+
+	.key-message{
+	  min-height: 992px;
+	  margin: 0 auto;
+	  font-size: 16px;
+	}
+
+	.portfolio-client-name h2{
+		font-size: 5em;
+	}
+
+	.footer-ender h2{
+		font-size: 6em;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	.key-message h1{
+		font-size: 6em;
+	}
+
+	.portfolio-client-name h2{
+		font-size: 4.8em;
+	}
+
+}
+
+@media screen and (max-width: 992px){
+
+	.header{
+		justify-content: space-between;
+	}
+
+	.header .title{
+		display: none;
+	}
+
+	.key-message h1{
+		font-size: 5em;
+	}
+
+	.key-message .emphasis span{
+		margin-left: 0;
+	}
+
+	.key-message p {
+		font-size: 1.2em;
+		margin: 75px 0px 0px 0px;
+	}
+
+	.portfolio-client-name h2{
+		font-size: 4.5em;
+	}
+
+	.footer br{
+		display: none;
+	}
+
+	.emphasize-footer-message p{
+		font-size: 2.4em;
+	}
+
+	.footer .email a{
+		font-size: 1em;
+	}
+
+	.footer-ender h2{
+		font-size: 5em;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.key-message h1{
+		font-size: 5em;
+	}
+
+	.portfolio-client-name h2{
+		font-size: 4em;
+	}
+
+	.portfolio-image-container{
+		max-height: 500px;
+	}
+	
+	.emphasize-footer-message p{
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.key-message h1{
+		font-size: 3.8em;
+	}
+
+	.portfolio-client-name h2{
+		font-size: 3.2em;
+	}
+
+	.footer .links{
+		flex-wrap: wrap;
+	}
+
+	.footer .links p{
+		flex-basis: 40%;
+	}
+
+	.footer-ender h2{
+		font-size: 3.2em;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.key-message h1{
+		font-size: 3.5em;
+		line-height: 1;
+	}
+
+	.key-message p {
+		font-size: 1em;
+		margin: 80px 0px 0px 0px;
+	}
+
+	.portfolio-client-name h2{
+		font-size: 2.8em;
+	}
+
+	.portfolio-image-container{
+		max-height: 400px;
+	}
+
+	.emphasize-footer-message p{
+		font-size: 1.8em;
+	}
+
+	.footer .links p{
+		flex-basis: 50%;
+	}
+
+	.footer-ender h2{
+		font-size: 3em;
+	}
+}
+
+@media screen and (max-width: 576px){
+	.key-message h1,
+	.footer-ender h2{
+		font-size: 3em;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.key-message h1,
+	.footer-ender h2{
+		font-size: 2.5em;
+	}
+
+	.portfolio-client-name h2{
+		font-size: 2em;
+	}
+
+	.footer .links p{
+		flex-basis: 100%;
+	}
+
+	.emphasize-footer-message p{
+		font-size: 1.5em;
+	}
+
+	.footer .email{
+		margin: 40px auto;
+	}
+
+	.footer .email a{
+		font-size: 0.8em;
+	}
+
+}
+
+@media screen and (max-width: 420px){
+	.key-message h1,
+	.footer-ender h2{
+		font-size: 2.2em;
+	}
+
+	.emphasize-footer-message p{
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 360px){
+	.key-message h1,
+	.footer-ender h2{
+		font-size: 1.8em;
+	}
+
+	.portfolio-client-name h2{
+		font-size: 1.5em;
+	}
+
+	.emphasize-footer-message p{
+		font-size: 1em;
+	}
+}
