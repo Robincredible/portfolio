@@ -259,13 +259,18 @@ display: flex;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 10vh auto;
+}
+
+.portfolio-item:first-child{
+	margin: 0 auto 10vh;
 }
 
 .portfolio-item{
 	flex-basis: 100%;
 	display: flex;
 	position: relative;
-	margin: 8% auto;
+	margin: 10vh auto;
 }
 
 .portfolio-image-container{
@@ -302,7 +307,7 @@ display: flex;
 
 .footer-message,
 .emphasize-footer-message{
-	margin: 8% auto;
+	margin: 15vh auto;
 	font-size: 1.2em;
 }
 
@@ -315,7 +320,7 @@ display: flex;
 .footer .links{
 	display: flex;
 	justify-content: center;
-	margin: 8% auto;
+	margin: 10vh auto;
 }
 
 .footer .links a{
@@ -459,6 +464,10 @@ display: flex;
 
 	.footer br{
 		display: none;
+	}
+
+	.footer-message, .emphasize-footer-message{
+		font-size: 1em;
 	}
 
 	.emphasize-footer-message p{
