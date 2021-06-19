@@ -35,9 +35,20 @@
 	--black: #2c2c2c;
 }
 
-.dark-mode body{
-	background: var(--black);
+.dark-mode body {
+	background-color: var(--black);
 	color: var(--white);
+	transition: background 1s, color 1s;
+}
+
+.dark-mode body *::-moz-selection { 
+	background: var(--white); 
+	color: var(--black);
+}
+
+.dark-mode body *::selection { 
+	background: var(--white); 
+	color: var(--black);
 }
 
 .dark-mode a, 
@@ -45,10 +56,12 @@
 .dark-mode a:visited,
 .dark-mode a:visited:hover{
 	color: var(--white);
+	transition: color 0.6s;
 }
 
 .dark-mode .footer .email a:after{
 	background: var(--white);
+	transition: color 0.6s;
 }
 
 /* base styles */
@@ -70,6 +83,17 @@ body{
 	-webkit-scroll-behavior: smooth;
 	scroll-behavior: smooth;
 	width: 100%;
+	transition: background-color 1s, color 1s;
+}
+
+body *::selection { 
+	background: var(--black); 
+	color: var(--white);
+}
+
+body *::-moz-selection { 
+	background: var(--black); 
+	color: var(--white);
 }
 
 p{
@@ -85,6 +109,7 @@ a:hover,
 a:visited,
 a:visited:hover{
 	color: #2c2c2c;
+	transition: color 0.6s;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -319,6 +344,7 @@ display: flex;
 	bottom: -15px;
 	width: 100%;
 	transition:  0.3s;
+	transition: color 0.6s;
 }
 
 .footer .email a:hover:after{
