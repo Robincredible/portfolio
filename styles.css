@@ -508,6 +508,10 @@ display: flex;
 		font-size: 3.2em;
 	}
 
+	.portfolio-image-container{
+		max-height: 400px;
+	}
+
 	.footer .links{
 		flex-wrap: wrap;
 	}
@@ -539,10 +543,6 @@ display: flex;
 
 	.portfolio-client-name h2{
 		font-size: 2.8em;
-	}
-
-	.portfolio-image-container{
-		max-height: 400px;
 	}
 
 	.emphasize-footer-message p{
