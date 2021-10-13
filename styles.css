@@ -278,7 +278,17 @@ display: flex;
 	max-width: 60%;
 	overflow: hidden;
 	opacity: 0.5;
+	transition: 0.3s;
 	filter: grayscale(1) saturate(50%) brightness(0.9);
+}
+
+.portfolio-image-container:hover{
+	max-height: 600px;
+	max-width: 60%;
+	overflow: hidden;
+	opacity: 0.5;
+	transition: 0.3s;
+	filter: grayscale(0) saturate(95%) brightness(0.95);
 }
 
 .portfolio-client-name{
