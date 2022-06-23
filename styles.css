@@ -506,7 +506,7 @@ display: flex;
 		.key-message .emphasis:hover span{
 			letter-spacing: 2px;
 		}
-		
+
 }
 
 @media screen and (max-width: 992px){
@@ -545,7 +545,12 @@ display: flex;
 	.portfolio-client-name h2{
 		font-size: 4.5em;
 		bottom: 50%;
- 	    transform: translateY(-50%);
+ 	  transform: translateY(-50%);
+	}
+
+	.portfolio-client-name span{
+		position: relative;
+		top: -60px;
 	}
 
 	.portfolio-image-container{
