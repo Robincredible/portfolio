@@ -147,6 +147,10 @@ img{
 	padding: 40px 10px;
 }
 
+.no-underline{
+	text-decoration: none;
+}
+
 /* header */
 .header{
 	display: flex;

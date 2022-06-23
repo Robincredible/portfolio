@@ -4,6 +4,7 @@
 */
 
 function startup(){
+	apply_mode_on_load();
 	add_event_listeners();
 }
 
@@ -23,6 +24,24 @@ function toggle_dark_mode(){
 		doc.classList.remove('dark-mode');
 		para.innerHTML = 'Night Mode: Off';
 	} else{
+		doc.classList.add('dark-mode');
+		para.innerHTML = 'Night Mode: On';
+	}
+}
+
+function get_client_time(){
+	const time = new Date().getHours();
+	return time;
+}
+
+function apply_mode_on_load(){
+	const doc = document.body.parentElement;
+	const para = document.querySelector('.about p');
+	const time = get_client_time();
+
+	console.log(time);
+
+	if (time >= 18 && time >= 6) {
 		doc.classList.add('dark-mode');
 		para.innerHTML = 'Night Mode: On';
 	}
