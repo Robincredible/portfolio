@@ -582,8 +582,8 @@ display: flex;
 		max-height: 500px;
 	}
 
-	.key-message .emphasis span:hover{
-		letter-spacing: 1px;
+	.key-message .emphasis:hover span{
+		letter-spacing: 0.5px;
 	}
 	
 	.emphasize-footer-message p{
