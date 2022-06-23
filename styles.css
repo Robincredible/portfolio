@@ -583,7 +583,7 @@ display: flex;
 	}
 
 	.key-message .emphasis:hover span{
-		letter-spacing: 0.5px;
+		letter-spacing: 0px;
 	}
 	
 	.emphasize-footer-message p{
