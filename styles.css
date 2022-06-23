@@ -611,7 +611,7 @@ display: flex;
 	}
 
 	.key-message p{
-		font-size: 1em;
+		font-size: 1.5em;
 	}
 
 	.portfolio-client-name h2{
@@ -651,6 +651,10 @@ display: flex;
 		margin: 80px 0px 0px 0px;
 	}
 
+	.declaration p{
+		font-size: 1.5em;
+	}
+
 	.portfolio-client-name h2{
 		font-size: 2.8em;
 	}
@@ -669,10 +673,20 @@ display: flex;
 }
 
 @media screen and (max-width: 576px){
+	
 	.key-message h1,
 	.footer-ender h2{
-		font-size: 3em;
+		font-size: 3.2em;
 	}
+
+	.key-message .declaration p br:first-child{
+		display: none;
+	}
+
+	.footer-message{
+		font-size: 1.3em;
+	}
+
 }
 
 @media screen and (max-width: 480px){
@@ -687,11 +701,23 @@ display: flex;
 	}
 
 	.key-message p{
-		font-size: 0.6em;
+		font-size: 1.3em;
 	}
 
 	.portfolio-client-name h2{
 		font-size: 2em;
+	}
+
+	.portfolio-client-name span{
+		top: -30px;
+	}
+
+	.portfolio-image-container{
+		max-width: 100%;
+	}
+
+	.portfolio-client-name{
+		top: -30px;
 	}
 
 	.footer .links p{
@@ -699,7 +725,8 @@ display: flex;
 	}
 
 	.emphasize-footer-message p{
-		font-size: 1.5em;
+		font-size: 2.2em;
+		line-height: 1.5;
 	}
 
 	.footer .email{
@@ -713,23 +740,24 @@ display: flex;
 }
 
 @media screen and (max-width: 420px){
+
 	.key-message h1,
 	.footer-ender h2{
 		font-size: 2.2em;
 	}
 
-	.emphasize-footer-message p{
-		font-size: 1.2em;
-	}
 }
 
 @media screen and (max-width: 375px){
+
 	.header p{
 		font-size: 0.5em;
 	}
+
 }
 
 @media screen and (max-width: 360px){
+
 	.key-message h1,
 	.footer-ender h2{
 		font-size: 1.8em;
@@ -740,6 +768,7 @@ display: flex;
 	}
 
 	.emphasize-footer-message p{
-		font-size: 1em;
+		font-size: 1.5em;
 	}
+
 }
