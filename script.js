@@ -39,8 +39,6 @@ function apply_mode_on_load(){
 	const para = document.querySelector('.about p');
 	const time = get_client_time();
 
-	console.log(time);
-
 	if (time >= 18 && time >= 6) {
 		doc.classList.add('dark-mode');
 		para.innerHTML = 'Night Mode: On';
