@@ -501,6 +501,14 @@ display: flex;
 
 }
 
+@media screen and (max-width: 1024px){
+
+		.key-message .emphasis:hover span{
+			letter-spacing: 2px;
+		}
+		
+}
+
 @media screen and (max-width: 992px){
 
 	.header{
@@ -580,10 +588,6 @@ display: flex;
 
 	.portfolio-image-container{
 		max-height: 500px;
-	}
-
-	.key-message .emphasis:hover span{
-		letter-spacing: 2px;
 	}
 	
 	.emphasize-footer-message p{
