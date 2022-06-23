@@ -581,6 +581,10 @@ display: flex;
 	.portfolio-image-container{
 		max-height: 500px;
 	}
+
+	.key-message .emphasis span:hover{
+		letter-spacing: 1px;
+	}
 	
 	.emphasize-footer-message p{
 		font-size: 2em;
