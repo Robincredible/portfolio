@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", startup);
 
 function add_event_listeners(){
 	const about = document.querySelector('.theme-toggle');
+
 	about.addEventListener('click', toggle_dark_mode);
+	window.addEventListener('scroll', onScroll);
 }
 
 function toggle_dark_mode(){
@@ -43,4 +45,34 @@ function apply_mode_on_load(){
 		doc.classList.add('dark-mode');
 		para.innerHTML = 'Night Mode: On';
 	}
+}
+
+function onScroll(){
+	const scroll = window.scrollY;
+	const body = document.body;
+	const keyMessage = document.querySelector(".key-message");
+	const downArrow = document.querySelector(".down-arrow");
+	const upArrow = document.querySelector(".up-arrow");
+
+	if (scroll > (keyMessage.offsetHeight * 0.8)){
+		remove_class_on_scroll(downArrow, "visible");
+	} else {
+		add_class_on_scroll(downArrow, "visible");
+	}
+
+	if ( scroll >= (body.offsetHeight - 1200)){
+		add_class_on_scroll(upArrow, "visible");
+	} else {
+		remove_class_on_scroll(upArrow, "visible");
+	}
+
+}
+
+//e == element, c == class
+function remove_class_on_scroll(e, c){
+	e.classList.remove(c);
+}
+
+function add_class_on_scroll(e, c){
+	e.classList.add(c);
 }

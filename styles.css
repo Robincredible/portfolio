@@ -37,6 +37,16 @@
     100%{background-position:10% 0%}
 }
 
+@keyframes down-ease {
+	0% { opacity: 0; top: -40px }
+	10% { opacity: 0.2; top: 0px }
+	25% { opacity: 1; top: 0px }
+	50% { opacity: 1; top: 0px }
+	75% { opacity: 1; top: 0px }
+	90% { opacity: 0.2; top: 20px }
+	100% { opacity: 0; top: 40px }
+}
+
 @keyframes rotation {
 	0% { transform: rotate(0deg);}
 	100% { transform: rotate(360deg);}
@@ -81,6 +91,11 @@
 .dark-mode .footer .email a:after{
 	background: var(--white);
 	transition: bottom 0.3s, color 0.6s;
+}
+
+.dark-mode .down-arrow img,
+.dark-mode .up-arrow img{
+	filter: invert(1);
 }
 
 /* base styles */
@@ -220,6 +235,32 @@ img, object{
 }
 
 /* key message */
+
+.down-arrow{
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s;
+	z-index: 99;
+}
+
+.down-arrow img{
+	max-width: 60px;
+	max-height: auto;
+	position: relative;
+}
+
+.down-arrow.visible{
+	opacity: 0.8;
+	pointer-events: all;
+	transition: 0.5s;
+}
+
+.down-arrow img.animated{
+	animation: 2s infinite down-ease forwards ease-in-out;
+}
 
 .key-message{
 display: flex;
@@ -448,6 +489,34 @@ display: flex;
 	cursor: pointer;
 }
 
+.up-arrow{
+	transform: rotate(180deg);
+	position: fixed;
+	right: 5%;
+	bottom: -5%;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s;
+	z-index: 99;
+}
+
+.up-arrow img{
+	max-width: 60px;
+	max-height: auto;
+	position: relative;
+}
+
+.up-arrow.visible{
+	opacity: 0.8;
+	pointer-events: all;
+	transition: 0.5s;
+	bottom: 5%;
+}
+
+.up-arrow img.animated{
+	animation: 2s infinite up-ease forwards ease-in-out;
+}
+
 @media screen and (max-width: 1550px){
 	.footer-ender h2{
 		font-size: 7em;
@@ -476,9 +545,13 @@ display: flex;
 	}
 
 	.key-message{
-	  min-height: 150vh;
+	  min-height: 110vh;
 	  margin: 0 auto;
 	  font-size: 16px;
+	}
+
+	.portfolio-items-container{
+		margin: 0vh auto 10vh;
 	}
 
 	.portfolio-client-name h2{
@@ -639,6 +712,14 @@ display: flex;
 	}
 }
 
+@media screen and (max-width: 640px){
+
+	.up-arrow.visible{
+		bottom: 12%;
+	}
+
+}
+
 @media screen and (max-width: 600px){
 
 	.header p{
@@ -660,7 +741,7 @@ display: flex;
 	}
 
 	.portfolio-client-name h2{
-		font-size: 2.8em;
+		font-size: 2.5em;
 	}
 
 	.emphasize-footer-message p{
@@ -705,7 +786,8 @@ display: flex;
 	}
 
 	.key-message p{
-		font-size: 1.3em;
+		font-size: 1.2em;
+		line-height: 1.5;
 	}
 
 	.portfolio-client-name h2{
@@ -714,7 +796,7 @@ display: flex;
 
 	.portfolio-client-name span{
 		top: -30px;
-	}
+	} 
 
 	.portfolio-image-container{
 		max-width: 100%;
@@ -762,7 +844,10 @@ display: flex;
 
 @media screen and (max-width: 360px){
 
-	.key-message h1,
+	.key-message h1{
+		font-size: 2em;
+	}
+
 	.footer-ender h2{
 		font-size: 1.8em;
 	}
