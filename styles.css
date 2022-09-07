@@ -777,7 +777,7 @@ display: flex;
 @media screen and (max-width: 480px){
 
 	.down-arrow{
-		bottom: 20%;
+		bottom: 15%;
 	}
 
 	.key-message h1,
