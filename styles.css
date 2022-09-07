@@ -378,6 +378,10 @@ display: flex;
 	margin: 0;
 }
 
+.portfolio-client-name h2.text-left{
+	text-align: left;
+}
+
 .load-more{
 	display: none;
 }
