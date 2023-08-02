@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", startup);
 
 function add_event_listeners(){
 	const about = document.querySelector('.theme-toggle');
+	const spanToSqueeze = document.querySelectorAll("h1 span");
+	spanToSqueeze.forEach(function (e){ 
+		e.addEventListener('click', squeezeOnClick);
+	});
 
 	about.addEventListener('click', toggle_dark_mode);
 	window.addEventListener('scroll', onScroll);
@@ -64,6 +68,18 @@ function onScroll(){
 		add_class_on_scroll(upArrow, "visible");
 	} else {
 		remove_class_on_scroll(upArrow, "visible");
+	}
+
+}
+
+function squeezeOnClick(){
+
+	if (this.classList.contains('squeeze')){
+		this.classList.remove('squeeze');
+	} else {
+		this.classList.add('squeeze');
+
+		setTimeout( () => this.classList.remove('squeeze'), 800 );
 	}
 
 }

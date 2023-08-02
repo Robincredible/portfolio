@@ -8,13 +8,13 @@
 @font-face {
   font-family: Akira;
   src: local('serif'), url(./fonts/Akira-Expanded-Demo.otf);
-  font-display: swap;
+  /* font-display: swap; */
 }
 
 @font-face {
   font-family: MonospaceTypewriter;
   src: local(sans-serif), url(./fonts/MonospaceTypewriter.ttf);
-  font-display: swap;
+  /* font-display: swap; */
 }
 
 /* animations */
@@ -293,6 +293,13 @@ display: flex;
 .key-message .emphasis span:hover{
 	letter-spacing: 8px;
 	transition: 0.3s;
+	cursor: grab;
+}
+
+.key-message .emphasis span.squeeze:hover{
+	letter-spacing: -5px;
+	transition: 0.3s;
+	cursor: grabbing;
 }
 
 .asterisk{
